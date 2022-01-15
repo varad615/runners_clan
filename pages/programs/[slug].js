@@ -1,10 +1,10 @@
 import { sanityClient } from "../../sanity";
 
-const event = ({ title, distance, description, imageUrl }) => {
+const program = ({ title }) => {
   return (
     <>
       <div>
-        <h1>{title}</h1>
+      <h1>{title}</h1>
       </div>
     </>
   );
@@ -13,7 +13,7 @@ const event = ({ title, distance, description, imageUrl }) => {
 export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
 
-  const query = `*[_type == "event" && slug.current == $pageSlug][0]{
+  const query = `*[_type == "programs" && slug.current == $pageSlug][0]{
         title
         
     }`;
@@ -32,4 +32,4 @@ export const getServerSideProps = async (pageContext) => {
   }
 };
 
-export default event;
+export default program;
