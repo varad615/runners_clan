@@ -1,5 +1,7 @@
 import { IoLogoWhatsapp, IoMdCall } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
+import Link from "next/link";
+
 function contact() {
   return (
     <div>
@@ -7,9 +9,9 @@ function contact() {
         <div className="absolute inset-0 bg-gray-300">
           <iframe
             width="100%"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
             title="map"
             scrolling="no"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5625771180507!2d73.10013951485344!3d19.214298587008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795919f9a5387%3A0x16159c1e33b487f1!2sGharda%20Circle%20%26%20Azde%20Gaon%20Rd%2C%20Azde%20Gaon%2C%20Sagarli%20Gaon%2C%20Dombivli%20East%2C%20Dombivli%2C%20Maharashtra%20421203!5e0!3m2!1sen!2sin!4v1642191142719!5m2!1sen!2sin"
@@ -26,7 +28,7 @@ function contact() {
             </p>
             <div className="relative mb-2">
               <div className="font-bold">Name</div>
-              Runner's Clan Foundation
+              Runner&apos;s Clan Foundation
             </div>
             <hr />
             <div className="relative mt-2 mb-2">
@@ -39,24 +41,24 @@ function contact() {
               +917066557013
             </div>
             <div>
-              <a href="mailto: runnersclan2020@gmail.com">
+              <Link href="mailto: runnersclan2020@gmail.com" passHref>
                 <button className="bg-[#EA4335] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
                   &nbsp;
                   <HiMail /> &nbsp; Send Mail &nbsp;
                 </button>
-              </a>
-              <a target="_blank" href="https://wa.me/+917066557013">
+              </Link>
+              <Link target="_blank" href="https://wa.me/+917066557013" passHref>
                 <button className="bg-[#25D366] p-1 rounded-xl text-white flex flex-wrap items-center">
                   &nbsp;
                   <IoLogoWhatsapp /> &nbsp; whatsapp &nbsp;
                 </button>
-              </a>
-              <a target="_blank" href="tel:+917066557013">
+              </Link>
+              <Link target="_blank" href="tel:+917066557013" passHref>
                 <button className="bg-[#1C73E7] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
                   &nbsp;
                   <IoMdCall /> &nbsp; Call Us &nbsp;
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

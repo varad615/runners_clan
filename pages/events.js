@@ -31,11 +31,11 @@ function events({ event }) {
 
     <div>
       <div className="absolute top-3 left-3">
-        <a href="/">
+        <Link href="/">
           <button className="fixed bg-[#ED1C24] text-white font-bold py-2 px-4 rounded inline-flex items-center">
             <HiHome />
           </button>
-        </a>
+        </Link>
       </div>
       <img src="/eventbg.png" alt="event" className="bg-cover" />
       <div className="bg-[#2E3192]">

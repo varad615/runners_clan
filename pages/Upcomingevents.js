@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { sanityClient } from "../sanity";
 import { HiHome } from "react-icons/hi";
+import Link from "next/link";
 
 const Upcomingevents = ({ event }) => {
   const [timerDays, setTimerDays] = useState(0);
@@ -46,10 +47,14 @@ const Upcomingevents = ({ event }) => {
     <>
       <div className="bg-gradient-to-t from-[#ED1C24] to-[#2E3192] h-screen">
         <section>
-          <div className="ml-5"><a href="/">
-            <button class="bg-white mt-5 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-              <div><HiHome /></div>
-            </button></a>
+          <div className="ml-5">
+            <Link href="/">
+              <button className="bg-white mt-5 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                <div>
+                  <HiHome />
+                </div>
+              </button>
+            </Link>
           </div>
           <div className="justify-center flex text-6xl text-center text-white">
             <div className="mx-4 mt-[8%]">
@@ -69,12 +74,13 @@ const Upcomingevents = ({ event }) => {
           </div>
         </section>
         <div className="justify-center flex mt-10">
-          <a href="/events">
-            {" "}
-            <button className="bg-[#2E3192] text-white p-3 rounded-xl">
-              Other Events
-            </button>
-          </a>
+          <Link href="/events">
+            <a>
+              <button className="bg-[#2E3192] text-white p-3 rounded-xl">
+                Other Events
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
     </>
