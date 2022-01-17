@@ -3,6 +3,7 @@ import { HiHome } from "react-icons/hi";
 import { MdLocationOn } from "react-icons/md";
 import Link from "next/link";
 function events({ event }) {
+  console.log(event);
   const iconstyle = { color: "#ED1C24", fontSize: "1em" };
   return (
     <div>

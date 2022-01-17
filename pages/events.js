@@ -39,7 +39,6 @@ function events({ event }) {
       </div>
       <img src="/eventbg.png" alt="event" className="bg-cover" />
       <div className="bg-[#2E3192]">
-        {" "}
         <div>
           {event && (
             <div className="p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">

@@ -1,8 +1,10 @@
+import { IoLogoWhatsapp } from "react-icons/io";
+import { HiMail } from "react-icons/hi";
 function contact() {
   return (
     <div>
-      <section class="text-gray-600 body-font relative">
-        <div class="absolute inset-0 bg-gray-300">
+      <section className="text-gray-600 body-font relative">
+        <div className="absolute inset-0 bg-gray-300">
           <iframe
             width="100%"
             frameborder="0"
@@ -14,27 +16,35 @@ function contact() {
             className="h-screen min-h-full"
           ></iframe>
         </div>
-        <div class="container px-5 py-24 mx-auto flex">
-          <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+        <div className="container px-5 py-24 mx-auto flex">
+          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
               Contact Us
             </h2>
-            <p class="leading-relaxed mb-5 text-gray-600">
+            <p className="leading-relaxed mb-5 text-gray-600">
               Feel free to drop us a message
             </p>
-            <div class="relative mb-2">
+            <div className="relative mb-2">
               <div className="font-bold">Name</div>
               Runner's Clan Foundation
             </div>
             <hr />
-            <div class="relative mt-2 mb-2">
+            <div className="relative mt-2 mb-2">
               <div className="font-bold">Email</div>
               runnersclan2020@gmail.com
             </div>
             <hr />
-            <div class="relative mt-2 mb-2">
+            <div className="relative mt-2 mb-2">
               <div className="font-bold">Contact Number</div>
               +917066557013
+            </div>
+            <div>
+              <button className="bg-[#EA4335] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
+                &nbsp;<HiMail /> &nbsp; Send Mail &nbsp;
+              </button>
+              <button className="bg-[#25D366] p-1 rounded-xl text-white flex flex-wrap items-center">
+                &nbsp;<IoLogoWhatsapp /> &nbsp; whatsapp &nbsp;
+              </button>
             </div>
           </div>
         </div>
