@@ -1,4 +1,4 @@
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp, IoMdCall } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
 function contact() {
   return (
@@ -39,12 +39,24 @@ function contact() {
               +917066557013
             </div>
             <div>
-              <button className="bg-[#EA4335] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
-                &nbsp;<HiMail /> &nbsp; Send Mail &nbsp;
-              </button>
-              <button className="bg-[#25D366] p-1 rounded-xl text-white flex flex-wrap items-center">
-                &nbsp;<IoLogoWhatsapp /> &nbsp; whatsapp &nbsp;
-              </button>
+              <a href="mailto: runnersclan2020@gmail.com">
+                <button className="bg-[#EA4335] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
+                  &nbsp;
+                  <HiMail /> &nbsp; Send Mail &nbsp;
+                </button>
+              </a>
+              <a target="_blank" href="https://wa.me/+917066557013">
+                <button className="bg-[#25D366] p-1 rounded-xl text-white flex flex-wrap items-center">
+                  &nbsp;
+                  <IoLogoWhatsapp /> &nbsp; whatsapp &nbsp;
+                </button>
+              </a>
+              <a target="_blank" href="tel:+917066557013">
+                <button className="bg-[#1C73E7] mt-2 mb-2 p-1 rounded-xl text-white flex flex-wrap items-center">
+                  &nbsp;
+                  <IoMdCall /> &nbsp; Call Us &nbsp;
+                </button>
+              </a>
             </div>
           </div>
         </div>
