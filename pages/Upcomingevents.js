@@ -86,7 +86,7 @@ export default function UpComingEvents({ upcomingevents }) {
 
 UpComingEvents.getInitialProps = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/upcoming/62bc73af7f98b980523fd375"
+    "https://runners-clan.vercel.app/api/upcoming/62bc73af7f98b980523fd375"
   );
   const { data } = await res.json();
 

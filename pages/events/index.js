@@ -53,7 +53,7 @@ export default function Home({ notes }) {
 }
 
 Home.getInitialProps = async () => {
-  const res = await fetch("http://localhost:3000/api/posts");
+  const res = await fetch("https://runners-clan.vercel.app/api/posts");
   const { data } = await res.json();
 
   return { notes: data };
