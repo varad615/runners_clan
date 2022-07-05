@@ -2,7 +2,6 @@ import Link from "next/link";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
 export default function Upcoming({ notes }) {
-    
   return (
     <div className="bg-gradient-to-t from-[#eeaeca] to-[#94bbe9] h-screen">
       <div>
@@ -16,28 +15,26 @@ export default function Upcoming({ notes }) {
         <div className="m-5">
           {notes.map((note) => {
             return (
-              <div>
-                <div key={note._id} className="card">
-                  <div className="rounded-xl overflow-hidden bg-white">
-                    <div className="px-3 py-2">
-                      <div className="font-bold text-xl mb-2">{note.title}</div>
-                      <p className="text-gray-700 text-base">
-                        {note.description}
-                      </p>
-                    </div>
-                    <div className="px-3 pt-2 pb-2">
-                      <div>
-                        <Link href={`/cms/${note._id}/upcomingedit`}>
-                          <button
-                            css={{
-                              backgroundColor: "#2E3192"
-                            }}
-                          >
-                            Learn More
-                            <AiOutlineDoubleRight />
-                          </button>
-                        </Link>
-                      </div>
+              <div key={note._id} className="card">
+                <div className="rounded-xl overflow-hidden bg-white">
+                  <div className="px-3 py-2">
+                    <div className="font-bold text-xl mb-2">{note.title}</div>
+                    <p className="text-gray-700 text-base">
+                      {note.description}
+                    </p>
+                  </div>
+                  <div className="px-3 pt-2 pb-2">
+                    <div>
+                      <Link href={`/cms/${note._id}/upcomingedit`}>
+                        <button
+                          css={{
+                            backgroundColor: "#2E3192"
+                          }}
+                        >
+                          Learn More
+                          <AiOutlineDoubleRight />
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
