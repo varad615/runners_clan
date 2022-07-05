@@ -2,7 +2,6 @@ import fetch from "isomorphic-unfetch";
 import { BsWhatsapp } from "react-icons/bs";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import Link from "next/link";
-import { Button, Loader } from "@nextui-org/react";
 
 const Note = ({ note }) => {
   const iconstyle = { color: "#fff", fontSize: "1.5em" };
@@ -48,14 +47,10 @@ const Note = ({ note }) => {
                     href="/events"
                     className="inline-flex mt-6 items-center"
                   >
-                    <Button
-                      css={{
-                        backgroundColor: "#2E3192"
-                      }}
-                      icon={<BiLeftArrowAlt style={iconback} />}
-                    >
+                    <button className="bg-[#2E3192] text-white flex felx-inline p-2 rounded-lg px-4 gap-4">
+                      <BiLeftArrowAlt style={iconback} />
                       Go Back
-                    </Button>
+                    </button>
                   </Link>
                 </div>
               </div>

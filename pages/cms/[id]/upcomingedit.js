@@ -115,7 +115,7 @@ const UpcomingEdit = ({ upcoming }) => {
                     datepicker-format="dd/mm/yyyy"
                     type="datetime-local"
                     name="date"
-                    class="bg-[#F1F3F5] border focus:border-gray-300 border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-fit p-2 "
+                    className="bg-[#F1F3F5] border focus:border-gray-300 border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-fit p-2 "
                     placeholder="Select date"
                   />
 

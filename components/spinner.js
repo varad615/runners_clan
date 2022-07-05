@@ -1,10 +1,10 @@
 const Spinner = () => {
   return (
     <div className="mx-5">
-      <div class="text-center rounded-xl p-2 text-[#2E3192] w-fit">
+      <div className="text-center rounded-xl p-2 text-[#2E3192] w-fit">
         <svg
           role="status"
-          class="inline w-8 h-8 mr-2 text-gray-200 animate-spin  fill-[#2E3192]"
+          className="inline w-8 h-8 mr-2 text-gray-200 animate-spin  fill-[#2E3192]"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

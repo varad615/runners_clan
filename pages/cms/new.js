@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import fetch from "isomorphic-unfetch";
 import { useRouter } from "next/router";
 import { Button, Loading, Container } from "@nextui-org/react";
+import Spinner from "../../components/spinner";
 
 const NewNote = () => {
   const [form, setForm] = useState({
@@ -87,7 +88,7 @@ const NewNote = () => {
       </Link>
       <div>
         {isSubmitting ? (
-          <Loading active inline="centered" />
+          <Spinner/>
         ) : (
           <div>
             <div className="flex flex-col text-center w-full mb-12">

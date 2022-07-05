@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import fetch from "isomorphic-unfetch";
 import { Container } from "@nextui-org/react";
 import { useRouter } from "next/router";
+import Spinner from "../../../components/spinner";
 
 const EditNote = ({ note }) => {
   const [form, setForm] = useState({
     title: note.title,
     description: note.description,
-    distance  : note.distance
+    distance: note.distance
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
@@ -74,7 +75,7 @@ const EditNote = ({ note }) => {
       <h1>Update Note</h1>
       <div>
         {isSubmitting ? (
-          <Loader active inline="centered" />
+          <Spinner />
         ) : (
           <div>
             <div className="flex flex-col text-center w-full mb-12">
