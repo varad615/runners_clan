@@ -4,31 +4,6 @@ import Link from "next/link";
 function events({ event }) {
   console.log(event);
   return (
-    /*<div>
-      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-        <div class="rounded overflow-hidden shadow-lg">
-          <img
-            class="lg:h-48 md:h-36 w-full object-cover object-center"
-            src="https://i.pinimg.com/736x/4c/09/9f/4c099f4fdde6b4bc7a2561245f4a7286.jpg"
-            alt="Mountain"
-          />
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Mountain</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-              exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="px-6 pt-2 pb-2">
-            <button className="bg-[#2E3192] text-white p-2 rounded">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>*/
-
     <div>
       <div className="absolute top-3 left-3">
         <Link href="/">

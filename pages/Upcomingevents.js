@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { sanityClient } from "../sanity";
-import { HiHome } from "react-icons/hi";
 import Link from "next/link";
+import { HiHome } from "react-icons/hi";
+import React, { useEffect, useRef, useState } from "react";
 
-const Upcomingevents = ({ event }) => {
+export default function UpComingEvents({ upcomingevents }) {
   const [timerDays, setTimerDays] = useState(0);
   const [timerHours, setTimerHours] = useState(0);
   const [timerMinutes, setTimerMinutes] = useState(0);
@@ -12,7 +11,7 @@ const Upcomingevents = ({ event }) => {
   let interval = useRef();
 
   const startTimer = () => {
-    const eventDate = event[0].launchAt;
+    const eventDate = upcomingevents.date;
     const countDownDate = new Date(eventDate).getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -42,10 +41,10 @@ const Upcomingevents = ({ event }) => {
       clearInterval(interval.current);
     };
   });
-  console.log(event);
+  console.log(timerDays);
   return (
-    <>
-      <div className="bg-gradient-to-t from-[#ED1C24] to-[#2E3192] h-screen">
+    <div>
+      <div className="bg-gradient-to-t from-[#eeaeca] to-[#94bbe9] h-screen">
         <section>
           <div className="ml-5">
             <Link href="/">
@@ -56,15 +55,15 @@ const Upcomingevents = ({ event }) => {
               </button>
             </Link>
           </div>
-          <div className="justify-center flex text-6xl text-center text-white">
+          <div className="justify-center flex text-6xl text-center text-black">
             <div className="mx-4 mt-[8%]">
-              <div className="font-bold">{event[0].eventName}</div>
+              <div className="font-bold">{upcomingevents.title}</div>
               <br />
-              <div className="text-2xl">{event[0].eventDescription}</div>
+              <div className="text-2xl">{upcomingevents.description}</div>
             </div>
           </div>
           <hr className="font-bold mx-[20%] mt-[15px]" />
-          <div className=" justify-center flex mt-9 text-white">
+          <div className=" justify-center flex mt-9 text-black">
             <div className="flex flex-wrap gap-4 text-5xl">
               <div>{timerDays} :</div>
               <div>{timerHours} :</div>
@@ -75,34 +74,21 @@ const Upcomingevents = ({ event }) => {
         </section>
         <div className="justify-center flex mt-10">
           <Link href="/events">
-            <a>
-              <button className="bg-[#2E3192] text-white p-3 rounded-xl">
-                Other Events
-              </button>
-            </a>
+            <button className="bg-[#2E3192] text-white p-3 rounded-xl">
+              Other Events
+            </button>
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-export const getServerSideProps = async () => {
-  const query = `*[_type == "upcomingevent"] | order(_createdAt desc)`;
-  const event = await sanityClient.fetch(query);
+}
 
-  if (!event.length) {
-    return {
-      props: {
-        event: []
-      }
-    };
-  } else {
-    return {
-      props: {
-        event
-      }
-    };
-  }
-};
+UpComingEvents.getInitialProps = async () => {
+  const res = await fetch(
+    "http://localhost:3000/api/upcoming/62bc73af7f98b980523fd375"
+  );
+  const { data } = await res.json();
 
-export default Upcomingevents;
+  return { upcomingevents: data };
+};
