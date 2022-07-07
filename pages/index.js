@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <div>
         <div className="absolute top-3 left-3">
-          <Link href="/upcomingevents">
+          <Link href="/events">
             <a>
               <button className="bg-[#2E3192] transition-all p-2 rounded text-white">
                 Up-Coming Events
