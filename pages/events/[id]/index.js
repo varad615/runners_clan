@@ -20,7 +20,7 @@ const Note = ({ note }) => {
                 />
               </div>
               <Link
-                href={`whatsapp://send?text=Hay check out this event by Runners Clan Foundation *${note.title}*%0A${note.description}%0Ahttp://localhost:3000//events/${note._id}
+                href={`whatsapp://send?text=Hay check out this event by Runners Clan Foundation *${note.title}*%0A${note.description}%0Ahttps://runners-clan.vercel.app/events/${note._id}
                `}
               >
                 <button className="bg-[#2CD84D] -translate-y-4 p-2 rounded-3xl translate-x-4">
