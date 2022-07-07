@@ -48,6 +48,7 @@ export default function Upcoming({ notes }) {
 }
 
 Upcoming.getInitialProps = async () => {
+  // const res = await fetch("https://runners-clan.vercel.app/api/upcoming");
   const res = await fetch("https://runners-clan.vercel.app/api/upcoming");
   const { data } = await res.json();
 

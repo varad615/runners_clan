@@ -26,14 +26,7 @@ export default function Cms({ notes }) {
                   <div className="px-3 pt-2 pb-2">
                     <div>
                       <Link href={`/cms/${note._id}`}>
-                        <button
-                          css={{
-                            backgroundColor: "#2E3192"
-                          }}
-                          iconRight={<AiOutlineDoubleRight />}
-                        >
-                          Learn More
-                        </button>
+                        <button>Learn More</button>
                       </Link>
                     </div>
                   </div>
