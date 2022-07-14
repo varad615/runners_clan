@@ -28,7 +28,7 @@ const UpcomingEdit = ({ upcoming }) => {
   const updateNote = async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/upcoming/${router.query.id}`,
+        `https://runners-clan.vercel.app/api/upcoming/${router.query.id}`,
         {
           method: "PUT",
           headers: {
@@ -137,7 +137,7 @@ const UpcomingEdit = ({ upcoming }) => {
 };
 
 UpcomingEdit.getInitialProps = async ({ query: { id } }) => {
-  const res = await fetch(`http://localhost:3000/api/upcoming/${id}`);
+  const res = await fetch(`https://runners-clan.vercel.app/api/upcoming/${id}`);
   const { data } = await res.json();
 
   return { upcoming: data };

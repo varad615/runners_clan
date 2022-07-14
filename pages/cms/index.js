@@ -26,7 +26,7 @@ export default function Cms({ notes }) {
                   <div className="px-3 pt-2 pb-2">
                     <div>
                       <Link href={`/cms/${note._id}`}>
-                        <button>Learn More</button>
+                        <button className="">See more</button>
                       </Link>
                     </div>
                   </div>
